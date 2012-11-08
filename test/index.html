@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jasmine Test Runner</title>
+  <link rel="stylesheet" type="text/css" href="lib/jasmine-1.0.0/jasmine.css">
+  <script type="text/javascript" src="lib/jasmine-1.0.0/jasmine.js"></script>
+  <script type="text/javascript" src="lib/jasmine-1.0.0/jasmine-html.js"></script>
+
+  <!-- include source files here... -->
+  <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.scrolledOut.js"></script>
+
+  <!-- include spec files here... -->
+  <script type="text/javascript" src="spec/jquery-scrolledOut.js"></script>
+
+</head>
+<body>
+
+    <div id="viewport">
+        <ul id="scroller">
+            <li>item one</li>
+            <li>item two</li>
+            <li>item three</li>
+            <li>item four</li>
+            <li>item five</li>
+            <li>item six</li>
+            <li>item seven</li>
+            <li>item eight</li>
+            <li>item nine</li>
+        </ul>
+    </div>
+
+    <style type="text/css">
+
+        #viewport                   { float:left; width:250px; margin: 0 5px 0 0; height:200px; overflow-y:scroll }
+        #scroller                   { width:500px; margin:0; padding:0; list-style-type:none; }
+        #scroller li                { text-indent:15px; height:50px; line-height:50px; background:#f1ebeb; } 
+        #scroller :nth-child(2n+2)  { background:#e5e0e0; }
+        .jasmine_reporter           { padding-left:255px; }
+
+    </style>
+
+
+
+<script type="text/javascript">
+  jasmine.getEnv().addReporter( new jasmine.TrivialReporter() );
+  jasmine.getEnv().execute();
+</script>
+
+</body>
+</html>

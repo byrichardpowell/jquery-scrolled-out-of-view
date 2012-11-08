@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+
+<title>jQuery Scrolled Out Of View</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+
+
+<!-- For all browsers -->
+<link rel="stylesheet" media="screen" href="css/global.css">
+<link rel="stylesheet" media="print" href="css/print.css">
+
+
+
+<style type="text/css">
+  .download { float: right; }
+  pre 	{ background: #000; color: #fff; padding: 15px; margin-bottom:15px;}
+  ul 	{ padding-bottom:15px;}
+  li 	{ margin-left:15px; list-style-type:disc; }
+</style>
+
+
+
+</head>
+
+<body>
+	
+
+	<div id="exists"></div>
+
+	<div class="container">
+		
+		<article class="clm left">
+			
+			<h1>jQuery Scroll Out Of View</h1>
+			<p>jQuery Scroll Out of view is a lightweight plugin for detecting if an element has been scrolled out of view and by how much.  Run on an element, supply a wrapper element and an object will be returned.  The object will have numerical values for top, bottom, left and right if the element has been scrolled out of the wrapper on those respective sides.  Those numerical values represent by how many pixels the element is out of view on that side.  If the element is completely in view the object will be empty.</p>
+
+			<h2>When would this be useful?</h2>
+			<p>Recently I had to position a div over a list item.  That list item used overflow:scroll so as the list scroll the div had to move.  If the list item became partially or completely scrolled out of view I had to resize or hide the div.</p>
+
+			<h2>Demo</h2>
+			<p>Scroll the list below:</p>
+
+			<div id="viewport">
+		        <ul id="scroller">
+		            <li>item one</li>
+		            <li>item two</li>
+		            <li>item three</li>
+		            <li>item four</li>
+		            <li>item five</li>
+		            <li>item six</li>
+		            <li>item seven</li>
+		            <li>item eight</li>
+		            <li>item nine</li>
+		        </ul>
+		    </div>
+
+		    <p>Now run the following code example in your console</p>
+
+			<pre>$('#viewport li').first().scrolledOut( $('#viewport') )</pre>
+			
+		</div>
+		
+		<aside class="clm">
+						
+			<h2>Instalation</h2>
+			<ul>
+				<li>Download this project (<a href="https://github.com/byrichardpowell/jquery-scrolled-out-of-view/zipball/master">zip</a> or <a href="https://github.com/byrichardpowell/jquery-scrolled-out-of-view/tarball/master">tar</a>)</li>
+				<li>Or clone the project (clone command below)</li>
+				<li>Include jquery &amp; jquery scrolled out on your page</li>
+			</ul>
+
+			<h2>Git Checkout</h2>
+			<p>Checkout the project by running this in terminal</p>
+			<pre>$ git clone https://github.com/byrichardpowell/jquery-scrolled-out-of-view.git</pre>
+
+			<h2>Tests</h2>
+			<p><a href="test/">Unit tests are available</a> and are written using Jasmine.  I'm still relatively new to TDD, so please do lemme know if you see any problems.</p>
+
+		    <h2>The Author</h2>
+		    <p>you can find me on the internet:</p>
+		    <ul>
+		    	<li>Bloggin' at <a href="http://www.byrichardpowell.co.uk/">http://www.byrichardpowell.co.uk/</a></li>
+		    	<li>Tweetin' at <a href="https://twitter.com/byrichardpowell">https://twitter.com/byrichardpowell</a></li>
+		    	<li>Emailin' at <a href="mailto:richardogmail.com">richardo@gmail.com</a></li>
+		    </ul>		
+
+		    <h2>Other plugins</h2>
+		    <p>I've written a few jquery plugins now:</p>
+		    <ul>
+		    	<li><a href="http://byrichardpowell.github.com/Style-Select/">Styling selects</a></li>
+		    	<li><a href="http://byrichardpowell.github.com/html5-form-validation-with-style/">Styling HTML5 Validation</a></li>
+		    	<li><a href="http://byrichardpowell.github.com/jquery-or/">Selecting this element <strong>or</strong> that element</a></li>
+		    	<li><a href="http://byrichardpowell.github.com/jQuery-Loading/">Triggering a loading state on part of a page</a></li>
+		    </ul>
+			
+		</aside>
+		
+
+
+	</div>	
+	
+	
+	<a href="https://github.com/byrichardpowell/jquery-scrolled-out-of-view">
+		<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" />
+	</a>
+		
+
+
+	<style type="text/css">
+
+        #viewport                   { margin: 0 5px 15px 0; height:125px; overflow-y:scroll }
+        #scroller                   { width:1000px; margin:0; padding:0; list-style-type:none; }
+        #scroller li                { text-indent:15px; height:50px; line-height:50px; background:#f1ebeb; list-style-type:none; margin:0; padding:0; } 
+        #scroller :nth-child(2n+2)  { background:#e5e0e0; }
+
+    </style>
+
+
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.scrolledOut.js"></script>
+
+
+
+
+
+</body>
+</html>
+
